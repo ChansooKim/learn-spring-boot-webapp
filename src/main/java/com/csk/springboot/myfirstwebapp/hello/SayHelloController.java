@@ -27,4 +27,11 @@ public class SayHelloController {
         sb.append("</html>");
         return sb.toString();
     }
+
+    // sayHello.jsp
+    // /src/main/resources/META-INF/resources/WEB-INF/jsp/
+    @RequestMapping("say-hello-jsp")
+    public String sayHelloJsp() {
+        return "sayHello";
+    }
 }
