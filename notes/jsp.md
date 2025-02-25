@@ -123,6 +123,22 @@ url에 `/login`을 통해 접속한 로그인 페이지에서
 name과 password를 입력 후 submit하면, `welcome.jsp`페이지로 리다이렉션한다.
 
 
+
+form 페이지에서는 submit을 완료 후
+리다이렉션하기 위해 `"redirect:{end-point}"`를 사용한다.
+``` java
+@RequestMapping(value = "add-todo", method = RequestMethod.GET)  
+public String showNewTodoPage() {  
+    return "todo";  
+}  
+  
+@RequestMapping(value = "add-todo", method = RequestMethod.POST)  
+public String addNewTodo() {  
+	return "redirect:list-todos";
+}
+```
+
+
 #### Session vs Model vs Request
 ***
 Controller에서 Model에 값을 넣고 jsp에서 활용할 수 있는데
