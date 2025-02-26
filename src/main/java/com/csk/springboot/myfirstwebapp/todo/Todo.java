@@ -1,5 +1,7 @@
 package com.csk.springboot.myfirstwebapp.todo;
 
+import jakarta.validation.constraints.Size;
+
 import java.time.LocalDate;
 
 // Database (MySQL)
@@ -8,6 +10,7 @@ import java.time.LocalDate;
 public class Todo {
     private int id;
     private String username;
+    @Size(min = 10, message = "Enter at least 10 characters")
     private String description;
     private LocalDate targetDate;
     private boolean done;
