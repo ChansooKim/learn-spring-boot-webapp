@@ -15,11 +15,11 @@ public class TodoService {
 
     // 정적 리스트:: 몇 개의 todo를 추가하더라도, 서버를 재시작하면 사라진다.
     static {
-        todos.add(new Todo(++todosCount, "in28minutes", "Get AWS Certified",
+        todos.add(new Todo(++todosCount, "in28minutes", "Get AWS Certified 1",
                 LocalDate.now().plusYears(1), false));
-        todos.add(new Todo(++todosCount, "in28minutes", "Learn DevOps",
+        todos.add(new Todo(++todosCount, "in28minutes", "Learn DevOps 1",
                 LocalDate.now().plusYears(2), false));
-        todos.add(new Todo(++todosCount, "in28minutes", "Learn Full Stack Development",
+        todos.add(new Todo(++todosCount, "in28minutes", "Learn Full Stack Development 1",
                 LocalDate.now().plusYears(3), false));
     }
 
